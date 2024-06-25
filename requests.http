@@ -1,0 +1,55 @@
+### GET TASKS
+GET http://localhost/api/tasks
+X-API-Key: 62a71d2286c3d44ea60179b5e874362a
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsIm5hbWUiOiJ1c2VyIiwiZXhwIjoxNzE5MjUzMTg5fQ.9BAPix8TqUTX0LnDpQsfnzS4rm0taFVR8LBaLbdfigk
+
+### GET SINGLE TASK
+GET http://localhost/api/tasks/5
+X-API-Key: 62a71d2286c3d44ea60179b5e874362a
+
+### CREATE TASK
+POST http://localhost/api/tasks
+Content-Type: application/json
+X-API-Key: 62a71d2286c3d44ea60179b5e874362a
+{
+    "name": "",
+    "priority": 1
+}
+
+### UPDATE TASK
+PATCH http://localhost/api/tasks/5
+Content-Type: application/json
+X-API-Key: 62a71d2286c3d44ea60179b5e874362a
+
+{
+    "name": ""
+}
+
+### DELETE TASk
+DELETE http://localhost/api/tasks/1
+X-API-Key: 62a71d2286c3d44ea60179b5e874362a
+
+### - user - ###
+POST http://localhost/api/login.php
+Content-Type: application/json
+
+{
+    "username": "",
+    "password": ""
+}
+
+###
+POST http://localhost/api/refresh.php
+Content-Type: application/json
+
+{
+    "token": ""
+}
+
+###
+POST http://localhost/api/logout.php 
+Content-Type: application/json
+
+{
+    "token": ""
+}
